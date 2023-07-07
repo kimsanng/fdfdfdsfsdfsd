@@ -1,0 +1,195 @@
+.wrap{margin: 0 auto; }
+body{overflow-x: hidden;}
+
+svg {
+
+  animation: stroke 5s  infinite ;
+  filter: drop-shadow( 5px 5px 5px rgba(255, 255, 255, .4));
+}
+
+.loader {position:relative;display:none;}
+/*작업댸문에 loader:none시켰습니다!*/
+.loader video {filter: brightness(0.5);}
+.loader .loader_text {position: fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:10;color:#fff;font-size: 3rem;font-weight: 700;}
+video#bgvid {
+  position: fixed; right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto; z-index: 5;
+  background: url(polina.jpg) no-repeat;
+  background-size: cover;
+}
+video{
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+video::-webkit-media-controls-fullscreen-button {display:none;}
+
+/* 일시정지, 재생 버튼 */
+video::-webkit-media-controls-play-button {display:none;}
+
+/* 재생 슬라이드..? */
+video::-webkit-media-controls-timeline {display:none;}
+
+/* 현재 진행 시간 */
+video::-webkit-media-controls-current-time-display{display:none;}
+
+/* 전체 시간 */
+video::-webkit-media-controls-time-remaining-display {display:none;}
+
+/* 음소거 버튼 */
+video::-webkit-media-controls-mute-button {display:none;}
+
+/* 볼륨 조절 슬라이드 */
+video::-webkit-media-controls-volume-slider {display:none;}
+
+/* 괄호에 display: none !important; 를 추가하면된다.
+ 예 ) 전체화면 전환 버튼을 숨긴다. 
+ 다만 더블클릭으로 전체화면이 되는 기능등은 그대로고 단지 버튼만 없앤다. */
+
+video::-webkit-media-controls-fullscreen-button {
+	display: none !important;
+}
+
+@keyframes stroke {
+    0%   {
+      stroke-dashoffset: 25%;
+      stroke-dasharray: 0 50%;
+      fill: rgba(72,138,204,0);
+      stroke: rgba(54,95,160,1);
+      stroke-width: 3;
+      
+    }
+    70%  {
+      fill: rgba(72,138,204,0);
+      stroke: rgba(54,95,160,1);
+    }
+    80%  {
+      fill: rgba(72,138,204,0);
+      stroke: rgba(54,95,160,1);
+    }
+    100% {
+      stroke-dashoffset: -25%;
+      stroke-dasharray: 50% 0;
+      fill: rgba(72,138,204,1);
+      stroke: rgba(54,95,160,0);
+      stroke-width: 0;
+    }
+  }
+.header{position: relative; width: 100%; background: #0B1943;  z-index: 1;}
+header{ width: 100%;  background: #0B1943; border: 1px solid; margin: 0 auto; position: fixed; top: 0; left: 0;}
+header .logo{ width: 100px; height: 50px; margin: 10px 0 0 10px; }
+
+
+.visual{width: 100%; height: 700px;  margin: 0 auto; border: 1px solid; position: relative; background: #0C111F;}
+.svg_box{text-align: center; margin-top: 150px;}
+.svg_box .one{ position: relative; top: -270px;}
+.svg_box .v{position: relative;}
+.visual_textbox{ position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; color: #fff;}
+.visual_textbox b{font-size: 48px;}
+.visual_textbox p{font-size: 24px;}
+.visual_textbox span{color: #5350FF;} 
+.visual_textbox h1{font-size: 6.5rem; font-weight: 700;}
+.visual_textbox .date{margin-top: 100px;}
+
+
+
+
+.section1{width: 100%;  margin: 0 auto;  }
+.section1 .logo_section{height: 400px; background: linear-gradient(#081846,#2B71E5,#5C3CDB);}
+.section1 .introduce_box{position: relative; height: 1000px; background: linear-gradient(#132F84,#081439); }
+.section1 .introduce{ position: absolute; top: 30%; left: 50%; transform: translate(-50%,-50%); text-align: center;  }
+.section1 .introduce b{font-size: 48px; display: block; }
+.section1 .introduce p{margin-top: 40px; }
+.section1 .introduce b, .section1 .introduce > p{color: #FFF; text-align: center;}
+.section1 .introduce .linear{position: relative; background: #fff; width: 50px; color: #fff; margin: 0 auto; height: 1px; margin-top: 100px;} 
+.section1 .introduce .person{margin-top: 100px; text-align: center;}
+.section1 .video_box{}
+.section1 .video{border: 1px solid; width: 100%; height: 300px; position: absolute; top:50%;left:50%;transform:translate(-50%,40%); background: #fff;}
+
+
+
+
+.section2{width: 100%; height: 1300px; }
+.section2_inner{width: 800px; height: 1200px;  margin: 100px auto;}
+.section2 .text_area{ width: 100px; height: 100px; float: left; font-size: 48px; font-weight: 800;  text-shadow: 4px 2px 2px gray; margin-left: 50px;}
+.section2 .picture{width: 100%; margin-left: 50px;}
+ 
+.section2 .picture img{width: 258px; height: 285px; }
+.section2 .picture .img2{margin-top: 150px; }
+.section2 .picture .img1{margin-top: 100px; }
+
+.section2 .picture ul{width: 100%;}
+.section2 .picture ul li{float: right; width: 50%; }
+.section2 .picture li p{text-align: inherit;}
+
+.section2 .picture_textbox{margin-top: 25px;}
+.section2 .picture_textbox h3{font-weight: 700;}
+.section2 .picture_textbox span{background-color: #0010FF; border-radius: 50px; color: #fff; display: inline-block; padding: 1px 5px; font-size: 12px;}
+.section2 .picture_textbox p{color: #0010FF; font-weight: 400;}
+
+
+
+.section3{height:900px; width: 100%; border: 1px solid; background-image: url(../images/vcc_image/audience.png);background-position:center;background-repeat:no-repeat;background-size:cover}
+.section3 .section_inner{width: 768px;   margin: 0 auto; height: 500px;}
+.section3_text_box{ width: auto; margin-top: 100px;}
+.section3 .section_inner h3{color: #fff;font-weight: bold;font-size: 48px; margin-bottom: 100px; position: relative; z-index: 10;}
+
+.section3 .section_inner .section3_text{  margin-top: 50px;}
+.section3 .section_inner span{color: #fff;  background-color: #0010FF; border-radius: 20px; display: inline-block; padding: 8px 15px; text-align: center; font-size: 14px; font-weight: 300;}
+.section3 .section_inner p{text-align: left; font-size: 28px;color:#fff;}
+.section3 .section_inner h3::before{content: ""; position: absolute; width: 300px; height: 300px; background: linear-gradient(#081846,#1B4DA0,#402D8D); top: -93px; left: -128px; opacity: 0.5; border-radius: 50%; z-index: -1;}
+
+
+.section4{height:100%; width: 100%;margin: 0 auto;padding:70px 0;background: linear-gradient(#081846,#2B71E5 60%);}
+.section4 .sec4_inner {max-width: 768px;margin:0 auto;}
+.section4 .sec4_title {font-size:2rem;font-weight: 700;color:#fff;margin-bottom: 70px;}
+.section4 .sec4_inner .sec4_box {background-color: #fff;padding:20px 40px;}
+.section4 .sec4_inner .sec4_box .sec4_card {padding:30px 0;}
+.section4 .sec4_inner .sec4_box .sec4_card > p {font-weight: 700;}
+.section4 .sec4_inner .sec4_box .sec4_card .sec4_name {margin:10px 0;}
+.section4 .sec4_inner .sec4_box .sec4_card .sec4_info {background-color: #5350FF;color:#fff;display: inline-block;padding: 5px 7px;font-weight: 400;font-size: 1rem;}
+
+.section5{background-color:#000;padding:100px 0;width: 100%; border: 1px solid ; margin: 0 auto;}
+.sec5_inner {max-width: 768px;margin:0 auto;}
+.sec5_inner .sec5_title {color:#e4c1f7;font-weight: 500;}
+.sec5_inner .sec5_faq .sec5_quest {color:#fff;font-size:1.5rem;font-weight: 700;margin-top:50px;}
+.sec5_inner .sec5_faq .sec5_answer {color:#fff;margin:15px 0 30px;}
+.sec5_inner .sec5_faq .sec5_text {border-bottom: 1px solid #fff;}
+
+
+.section6 {height: 100%; width: 100%;margin: 0 auto;background-color: gray;padding:100px 0;}
+.sec6_inner {max-width: 768px;margin:0 auto;}
+.sec6_inner .contact_box, .sec6_inner .contact2_box {padding:50px 30px;background-color: #000;}
+.sec6_inner .contact_box > p, .sec6_inner .contact_box > h2 {color:#fff;}
+.sec6_inner .contact_box .contact_title {font-size:2rem;font-weight:600;}
+.sec6_inner .contact2_box .contact2_title {color:#fff;font-size: 2rem;font-weight: 600;}
+.sec6_inner .contact_box .contact_text {margin:15px 0 25px;}
+.sec6_inner .contact_box .contact_go {background-color: yellow;display: inline-block;padding: 13px 25px;}
+
+.section7{height: 500px; width: 768px; border: 1px solid ; margin: 0 auto;}
+
+
+
+
+footer{height: 300px; background: #282E40}
+footer p{ width: 768px; text-align: left; margin: 0 auto;  padding-top: 100px;}
+
+
+
+@media(max-width:768px){
+  .svg_box{
+    width: 100%;
+    position: relative;
+  }
+  svg{
+    width: 20%;
+  }
+  svg.v{
+    width: 30%;
+  }
+  svg.one{
+    transform: translatey(80%) translateX(-20%);
+  }
+}
